@@ -17,6 +17,10 @@ public class BaseModel {
 	@Valid
 	private BaseModel baseModel;
 	
+	// こうすれば、Listも行けるかも！
+
+        // List<MyPOJO> pojos2 = new ObjectMapper().readValue(json, new TypeReference<List<MyPOJO>>() {});
+	
 	public void setData(Map<String,?> data) throws IllegalAccessException, InvocationTargetException, IOException{
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writeValueAsString(data);
